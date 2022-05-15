@@ -4,11 +4,16 @@
   become: true
 
   tasks:
-  - name: install htop
+  - name: uninstall programs
     package: 
       name: htop
       state: absent
+
+    - name: install programs
+    package: 
       name: cronie
+      state: latest
+
   
   - name: add ansible user
     user:
