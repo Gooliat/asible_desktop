@@ -32,7 +32,7 @@
       name: ansible auto-provision
       user: ansible_user
       minute: "*/10"
-      job: ansible-pull -o -U https://github.com/Gooliat/asible_desktop.git
+      job: ansible-pull -U https://github.com/Gooliat/asible_desktop.git
 
   - name: copy wallpaper file
     copy:
