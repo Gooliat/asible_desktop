@@ -41,11 +41,14 @@
       owner: root
       group: root
 
-  - name: set wallpaper
+  - name: set wallpaper-light
     become_user: goliat
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///usr/share/wallpapers/ansible-wallpaper.png'"
+
+  - name: set wallpaper-dark
+    become_user: goliat
     dconf:
       key: "/org/gnome/desktop/background/picture-uri-dark"
       value: "'file:///usr/share/wallpapers/ansible-wallpaper.png'"
@@ -55,4 +58,4 @@
     become_user: goliat
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
-      value: "'center'"
+      value: "'centered'"
