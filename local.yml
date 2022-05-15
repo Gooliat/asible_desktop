@@ -9,11 +9,10 @@
       name: htop
       state: absent
 
-    - name: install programs
+  - name: install programs
     package: 
       name: cronie
       state: latest
-
   
   - name: add ansible user
     user:
