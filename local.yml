@@ -46,6 +46,7 @@
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file:///usr/share/wallpapers/ansible-wallpaper.png'"
+    dconf:
       key: "/org/gnome/desktop/background/picture-uri-dark"
       value: "'file:///usr/share/wallpapers/ansible-wallpaper.png'"
 
@@ -54,4 +55,4 @@
     become_user: goliat
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
-      value: "'zoom'"
+      value: "'center'"
