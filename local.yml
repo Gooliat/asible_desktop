@@ -7,7 +7,7 @@
   - name: install htop
     package: 
       name: htop
-      name: crontab
+      name: cronie
   
   - name: add ansible user
     user:
