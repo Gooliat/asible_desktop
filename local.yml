@@ -31,7 +31,7 @@
     ansible.builtin.cron:
       name: ansible auto-provision
       user: ansible_user
-      minute: "*/10"
+      minute: "*/2"
       job: ansible-pull -U https://github.com/Gooliat/asible_desktop.git
 
   - name: copy wallpaper file
