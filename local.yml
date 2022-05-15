@@ -7,3 +7,23 @@
   - name: install htop
     package: 
       name: htop
+  
+  - name: add ansible user
+     user:
+       name: ansible_user
+       system: yes
+ 
+   - name: set up sudo for ansible user
+     copy:
+       src: files/sudoer_ansible_user
+       dest: /etc/sudoers.d/ansible_user
+       owner: root
+       group: root
+       mode: 0440
+ 
+   - name: add ansible-pull cron job
+     cron:
+       name: ansible auto-provision
+       user: ansible_user
+       minute: "*/10"
+       job: ansible-pull -o -U https://github.com/Gooliat/asible_desktop.git
