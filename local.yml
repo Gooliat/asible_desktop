@@ -4,13 +4,13 @@
   become: true
   vars:
     gnome_extension_ids:
-      - 307
+      - 1160
 
   tasks:
   - name: uninstall programs
     package: 
-      name: htop
-      state: absent
+      name: gnome-shell-devel
+      state: latest
 
   - name: install programs
     package: 
