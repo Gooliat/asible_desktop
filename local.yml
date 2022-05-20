@@ -2,6 +2,9 @@
 - hosts: localhost
   connection: local
   become: true
+  vars:
+    gnome_extension_ids:
+      - 307
 
   tasks:
   - name: uninstall programs
