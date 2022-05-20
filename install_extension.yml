@@ -15,6 +15,7 @@
 
 - block:
     - name: Download Gnome Shell extension - {{ gnome_extension_info.name }}
+      become_user: goliat
       get_url:
         url: https://extensions.gnome.org{{ gnome_extension_info.download_url }}
          dest: "/home/goliat/Downloads/{{ gnome_extension_info.uuid }}.zip"
