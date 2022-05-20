@@ -17,7 +17,8 @@
     - name: Download Gnome Shell extension - {{ gnome_extension_info.name }}
       get_url:
         url: https://extensions.gnome.org{{ gnome_extension_info.download_url }}
-        dest: "{{ r_gnome_extension_download_dir.path }}/{{ gnome_extension_info.uuid }}.zip"
+         dest: "/home/goliat/Downloads/{{ gnome_extension_info.uuid }}.zip"
+ #       dest: "{{ r_gnome_extension_download_dir.path }}/{{ gnome_extension_info.uuid }}.zip"
       register: r_gnome_extension_download
 
     - name: Create install directory - {{ gnome_extension_info.name }}
