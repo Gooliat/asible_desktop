@@ -29,6 +29,7 @@
         mode: 0775
 
     - name: Install Gnome Shell extension - {{ gnome_extension_info.name }}
+      become_user: goliat
       unarchive:
         src: "{{ r_gnome_extension_download.dest }}"
         dest: "/home/goliat/.local/share/gnome-shell/extensions/{{ gnome_extension_info.uuid }}"
