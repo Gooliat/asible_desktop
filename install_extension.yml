@@ -22,7 +22,7 @@
 
     - name: Create install directory - {{ gnome_extension_info.name }}
       file:
-        path: "{{ ansible_user_dir }}/.local/share/gnome-shell/extensions/{{ gnome_extension_info.uuid }}"
+        path: "/home/goliat/.local/share/gnome-shell/extensions/{{ gnome_extension_info.uuid }}"
         state: directory
         owner: goliat
         group: goliat
