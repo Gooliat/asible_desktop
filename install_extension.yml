@@ -36,7 +36,6 @@
     remote_src: yes
 
 - name: Enable Gnome Shell extension - {{ gnome_extension_info.name }}
-  become: yes
   become_user: goliat
   ansible.builtin.command: gnome-extensions enable {{ gnome_extension_info.uuid }}
 #  always:
