@@ -38,7 +38,7 @@
 - name: Enable Gnome Shell extension - {{ gnome_extension_info.name }} - {{ gnome_extension_info.uuid }}
   become: yes
   become_user: goliat
-  ansible.builtin.command: gnome-extensions enable dash-to-panel@jderose9.github.com
+  ansible.builtin.command: gnome-extensions enable {{ gnome_extension_info.uuid }}
 #  always:
 #    - name: Delete temporary download directory
 #      file:
