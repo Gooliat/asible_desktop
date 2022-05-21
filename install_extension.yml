@@ -40,7 +40,7 @@
       become: yes
       become_user: goliat
       ansible.builtin.command: gnome-extensions enable {{ gnome_extension_info.uuid }}
-      remote_src: yes
+        remote_src: yes
 #  always:
 #    - name: Delete temporary download directory
 #      file:
