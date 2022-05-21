@@ -30,18 +30,18 @@
 
     - name: Install Gnome Shell extension - {{ gnome_extension_info.name }}
       become: yes
-      become_user: goliat
+      become_user:
       unarchive:
         src: "{{ r_gnome_extension_download.dest }}"
         dest: "/home/goliat/.local/share/gnome-shell/extensions/{{ gnome_extension_info.uuid }}"
         remote_src: yes
 
-    - name: Enable Gnome Shell extension - {{ gnome_extension_info.name }}
-      command: gnome-shell-extension-tool --enable-extension {{ gnome_extension_info.uuid }}
-  always:
-    - name: Delete temporary download directory
-      file:
-        path: "{{ r_gnome_extension_download_dir.path }}"
-        state: absent
-      changed_when: no
-  when: r_gnome_extensions_check_existing.stat.exists == False
+#    - name: Enable Gnome Shell extension - {{ gnome_extension_info.name }}
+#      command: gnome-shell-extension-tool --enable-extension {{ gnome_extension_info.uuid }}
+#  always:
+#    - name: Delete temporary download directory
+#      file:
+#        path: "{{ r_gnome_extension_download_dir.path }}"
+#        state: absent
+#      changed_when: no
+#  when: r_gnome_extensions_check_existing.stat.exists == False
