@@ -36,7 +36,7 @@
         dest: "/home/goliat/.local/share/gnome-shell/extensions/{{ gnome_extension_info.uuid }}"
         remote_src: yes
 
-    - name: Enable Gnome Shell extension - {{ gnome_extension_info.name }}
+    - name: Enable Gnome Shell extension - {{ gnome_extension_info.name }} - {{ gnome_extension_info.uuid }}
       become: yes
       become_user: goliat
       command: gnome-shell-extension-tool --enable-extension {{ gnome_extension_info.uuid }}
