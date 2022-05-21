@@ -35,7 +35,7 @@
     dest: "/home/goliat/.local/share/gnome-shell/extensions/{{ gnome_extension_info.uuid }}"
     remote_src: yes
 
-- name: Enable Gnome Shell extension - {{ gnome_extension_info.name }} - {{ gnome_extension_info.uuid }}
+- name: Enable Gnome Shell extension - {{ gnome_extension_info.name }}
   become: yes
   become_user: goliat
   ansible.builtin.command: gnome-extensions enable {{ gnome_extension_info.uuid }}
