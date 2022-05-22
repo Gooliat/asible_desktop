@@ -15,6 +15,7 @@
   - name: install programs
     package: 
       name: cronie
+      name: go
       state: latest
   
   - name: add ansible user
