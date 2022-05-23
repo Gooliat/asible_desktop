@@ -1,0 +1,4 @@
+- name: program | installera gnome-shell-devel
+  tags: packages, gnome-shell-devel
+  package:
+    name: gnome-shell-devel

@@ -1,0 +1,4 @@
+- name: program | installera go
+  tags: packages, go
+  package:
+    name: go

@@ -1,0 +1,4 @@
+- name: program | installera remmina
+  tags: packages, remmina
+  package:
+    name: remmina

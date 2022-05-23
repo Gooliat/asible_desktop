@@ -1,0 +1,11 @@
+- name: program | installera docker
+  tags: packages, docker
+  package:
+    name: docker
+
+#Starta docker tjänsten
+  - name: Starta docker tjänsten
+    service:
+      name: docker
+      state: started
+      enabled: yes
