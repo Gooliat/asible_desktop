@@ -1,0 +1,20 @@
+- name: installera Microsoft Edge
+  tasks:
+    - name: Add zypper signing key
+      ansible.builtin.rpm_key:
+        key: "https://packages.microsoft.com/keys/microsoft.asc"
+        state: present
+
+- name: Add repository into repo.d list
+      zypper_repository:
+        name: microsoft-edge
+        baseurl: "https://packages.microsoft.com/yumrepos/edge/"
+        enabled: true
+        gpgcheck: true
+        gpgkey: "https://packages.microsoft.com/keys/microsoft.asc"
+
+- name: Install microsoft-edge-stable
+      package:
+        name: "microsoft-edge-dev"
+        state: latest
+        update_cache: true
