@@ -7,21 +7,13 @@
       - 1160
 
   tasks:
-#  - name: uninstall programs
-#    package: 
-#      name: gnome-shell-devel
-#      state: latest
-
-  - name: install programs
-    package: 
-      name: cronie
-      name: go
-      name: remmina
-      name: docker
-      name: gnome-shell-devel
-      nam: onedrive
-      state: latest
   
+  - include_tasks: program/docker.yml
+  - include_tasks: program/gnome-shell-devel.yml
+  - include_tasks: program/go.yml
+  - include_tasks: program/onedrive.yml
+  - include_tasks: program/remmina.yml
+
   - name: add ansible user
     user:
       name: ansible_user
@@ -67,12 +59,7 @@
       key: "/org/gnome/desktop/background/picture-options"
       value: "'centered'"
 
-#Starta tjänster
-  - name: Starta docker tjänsten
-    service:
-      name: docker
-      state: started
-      enabled: yes
+
 
 #Installera en docker image och starta den
 #  tasks:
