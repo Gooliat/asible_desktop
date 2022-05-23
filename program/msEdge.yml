@@ -8,9 +8,8 @@
     name: microsoft-edge
     baseurl: "https://packages.microsoft.com/yumrepos/edge/"
     enabled: true
-    gpgcheck: true
-    gpgkey: "https://packages.microsoft.com/keys/microsoft.asc"
-    
+    auto_import_keys: yes
+
 - name: Install microsoft-edge-stable
   package:
     name: "microsoft-edge-dev"
