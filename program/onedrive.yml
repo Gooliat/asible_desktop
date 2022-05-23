@@ -1,4 +1,4 @@
-- name: program | installera gnome-shell-devel
-  tags: packages, gnome-shell-devel
+- name: program | installera onedrive
+  tags: packages, onedrive
   package:
-    name: gnome-shell-devel
+    name: onedrive
