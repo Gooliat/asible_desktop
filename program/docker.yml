@@ -4,8 +4,8 @@
     name: docker
 
 #Starta docker tjänsten
-  - name: Starta docker tjänsten
-    service:
-      name: docker
-      state: started
-      enabled: yes
+- name: Starta docker tjänten
+  service:
+    name: docker
+    state: started
+    enabled: yes
