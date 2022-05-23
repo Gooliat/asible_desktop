@@ -5,13 +5,13 @@
 
 - name: Add repository into repo.d list
   zypper_repository:
-    name: microsoft-edge
-    repo: "https://packages.microsoft.com/yumrepos/edge microsoft-edge-dev"
+    name: microsoft-edge-dev
+    repo: "https://packages.microsoft.com/yumrepos/edge"
     enabled: true
     autorefresh: yes
     auto_import_keys: yes
     runrefresh: yes
 
-- name: Install microsoft-edge-stable
+- name: Install microsoft-edge-dev
   package:
     name: "microsoft-edge-dev"
