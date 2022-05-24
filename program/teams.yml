@@ -1,0 +1,12 @@
+- name: Add repository into repo.d list
+  zypper_repository:
+    name: microsoft-teams
+    repo: https://packages.microsoft.com/yumrepos/ms-teams
+    enabled: true
+    autorefresh: yes
+    auto_import_keys: yes
+    runrefresh: yes
+
+- name: Install teams
+  package:
+    name: "teams"

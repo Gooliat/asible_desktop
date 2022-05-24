@@ -20,6 +20,7 @@
   - include_tasks: program/obs-studio.yml
   - include_tasks: program/vsCode.yml
   - include_tasks: program/virtualbox.yml
+  - include_tasks: program/teams.yml
 
 
 
