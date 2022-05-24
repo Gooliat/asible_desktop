@@ -2,3 +2,4 @@
   tags: packages, virtualbox
   package:
     name: virtualbox
+    name: virtualbox-qt
