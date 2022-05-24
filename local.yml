@@ -14,7 +14,7 @@
   - include_tasks: program/onedrive.yml
   - include_tasks: program/remmina.yml
   - include_tasks: program/msEdge.yml
-  - include_tasks: program/msEdge.yml
+  - include_tasks: program/spotify.yml
 
   - name: add ansible user
     user:
