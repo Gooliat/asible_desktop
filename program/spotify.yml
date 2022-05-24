@@ -1,0 +1,7 @@
+- name: program | spotify 
+  tags: program,flatpak,spotify
+  become_user: goliat
+  flatpak:
+    name: com.spotify.Client
+    method: user
+    state: present
