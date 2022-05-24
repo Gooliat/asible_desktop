@@ -1,0 +1,12 @@
+- name: Add repository into repo.d list
+  zypper_repository:
+    name: microsoft-vsCode
+    repo: https://packages.microsoft.com/yumrepos/vscode
+    enabled: true
+    autorefresh: yes
+    auto_import_keys: yes
+    runrefresh: yes
+
+- name: Install vsCode
+  package:
+    name: "code"
