@@ -1,5 +1,6 @@
 - name: program | installera virtualbox
   tags: packages, virtualbox
   package:
-    name: virtualbox
-    name: virtualbox-qt
+    name: 
+      - virtualbox
+      - virtualbox-qt
