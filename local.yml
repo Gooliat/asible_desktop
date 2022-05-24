@@ -17,6 +17,8 @@
   - include_tasks: program/remmina.yml
   - include_tasks: program/msEdge.yml
   - include_tasks: program/spotify.yml
+  - include_tasks: program/obs-studio.yml
+
 
   - name: add ansible user
     user:

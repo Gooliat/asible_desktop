@@ -1,0 +1,4 @@
+- name: program | installera obs-studio
+  tags: packages, obs-studio
+  package:
+    name: obs-studio
