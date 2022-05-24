@@ -18,7 +18,7 @@
   - include_tasks: program/msEdge.yml
   - include_tasks: program/spotify.yml
   - include_tasks: program/obs-studio.yml
-  - include_tasks: program/vscode.yml
+  - include_tasks: program/vsCode.yml
 
 
   - name: add ansible user
