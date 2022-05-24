@@ -8,6 +8,8 @@
 
   tasks:
   
+  - include_tasks: System_Settings/repos.yml
+
   - include_tasks: program/docker.yml
   - include_tasks: program/gnome-shell-devel.yml
   - include_tasks: program/go.yml
