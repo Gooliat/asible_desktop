@@ -2,3 +2,10 @@
   tags: packages, onedrive
   package:
     name: onedrive
+
+- name: copy onedrive synk file
+  copy:
+    src: files/sync_list
+    dest: /home/goliat/.config/onedrive/sync_list
+    owner: goliat
+    group: goliat
