@@ -1,4 +1,4 @@
-- name: Add repository into repo.d list
+- name: Add ms-teams into repo.d list
   zypper_repository:
     name: microsoft-teams
     repo: https://packages.microsoft.com/yumrepos/ms-teams
