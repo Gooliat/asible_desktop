@@ -23,8 +23,6 @@
   - include_tasks: program/teams.yml
   - include_tasks: program/cronie.yml
 
-
-
   - name: add ansible user
     user:
       name: ansible_user
@@ -69,18 +67,6 @@
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'centered'"
-
-
-
-#Installera en docker image och starta den
-#  tasks:
-#  - name: Starta docker driveone/onedrive
-#    docker_container:
-#      image: driveone/onedrive:stable
-#      name: driveone/onedrive
-#      state: started
-
-# tasks file for gnome-extensions
 
   - name: Parse Gnome Shell version
     shell: gnome-shell --version | sed 's/[^0-9.]*\([0-9.]*\).*/\1/'
