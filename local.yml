@@ -21,6 +21,7 @@
   - include_tasks: program/vsCode.yml
   - include_tasks: program/virtualbox.yml
   - include_tasks: program/teams.yml
+  - include_tasks: program/cronie.yml
 
 
 

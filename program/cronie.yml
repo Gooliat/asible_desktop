@@ -1,0 +1,4 @@
+- name: program | installera cronie
+  tags: packages, cronie
+  package:
+    name: cronie
