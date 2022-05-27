@@ -14,4 +14,4 @@
 
 - name: Enable bees i systemctl
   become: yes
-  ansible.builtin.command: sudo systemctl enable beesd@48873940-7542-4e03-b1a7-72bce085b8b9
+  ansible.builtin.command: systemctl enable beesd@48873940-7542-4e03-b1a7-72bce085b8b9
