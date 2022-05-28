@@ -3,15 +3,15 @@
   package:
     name: bees
 
-- name: copy bees configuration file
-  copy:
-    src: files/beesd.conf
-    dest: /etc/bees/beesd.conf
-    owner: root
-    group: root
-    mode: 0644
+#- name: copy bees configuration file
+#  copy:
+#    src: files/beesd.conf
+#    dest: /etc/bees/beesd.conf
+#    owner: root
+#    group: root
+#    mode: 0644
 
 
-- name: Enable bees i systemctl
-  become: yes
-  ansible.builtin.command: systemctl enable beesd@48873940-7542-4e03-b1a7-72bce085b8b9
+#- name: Enable bees i systemctl
+#  become: yes
+#  ansible.builtin.command: systemctl enable beesd@48873940-7542-4e03-b1a7-72bce085b8b9
