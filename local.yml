@@ -22,7 +22,7 @@
   - include_tasks: program/virtualbox.yml
   #- include_tasks: program/teams.yml
   - include_tasks: program/cronie.yml
-  - include_tasks: program/bees.yml
+  #- include_tasks: program/bees.yml
 
 
   - name: add ansible user
